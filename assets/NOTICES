@@ -2245,6 +2245,7 @@ file_selector_macos
 file_selector_platform_interface
 file_selector_web
 file_selector_windows
+google_fonts
 path_provider
 path_provider_android
 path_provider_foundation
