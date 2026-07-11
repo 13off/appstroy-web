@@ -35935,7 +35935,7 @@ $.ah.toString
 o=null
 q=3
 s=6
-return A.i(A.aEQ("sb_publishable_QBdH-vIQv4F_tVVNc4Ps_w_ssxwSaEm","https://dxbrhsefgxcaxzmrbfrb.supabase.co").C0(0,B.NX),$async$af7)
+return A.i(A.aEQ("sb_publishable_QBdH-vIQv4F_tVVNc4Ps_w_ssxwSaEm","https://api.appstroy-web.ru").C0(0,B.NX),$async$af7)
 case 6:q=1
 s=5
 break
