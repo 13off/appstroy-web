@@ -59,7 +59,7 @@ warning • The declaration '_muted' isn't referenced. Try removing the declarat
    info • Don't use 'BuildContext's across async gaps. Try rewriting the code to not use the 'BuildContext', or guard the use with a 'mounted' check • lib/screens/home_screen.dart:711:38 • use_build_context_synchronously
 warning • The '!' will have no effect because the receiver can't be null. Try removing the '!' operator • lib/screens/object_management_screen.dart:123:45 • unnecessary_non_null_assertion
 
-15 issues found. (ran in 15.2s)
+15 issues found. (ran in 14.7s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -75,3 +75,16 @@ Got dependencies!
 9 packages have newer versions incompatible with dependency constraints.
 Try `flutter pub outdated` for more information.
 Compiling lib/main.dart for the Web...                          
+Wasm dry run findings:
+Found incompatibilities with WebAssembly.
+
+package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
+package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 21040 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             87.4s
+✓ Built build/web
