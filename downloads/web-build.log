@@ -25,8 +25,9 @@ Try `flutter pub outdated` for more information.
 ✅ Функциональный контракт AppСтрой компании можно регистрировать и настраивать самостоятельно
 ✅ Функциональный контракт AppСтрой администратор управляет приглашениями, ролями и объектами
 ✅ Функциональный контракт AppСтрой приглашённый пользователь обязательно задаёт пароль
+✅ Функциональный контракт AppСтрой платформенные экраны сохраняют премиальный стиль и логотип №5
 
-🎉 12 tests passed.
+🎉 13 tests passed.
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -45,21 +46,11 @@ Analyzing skbs_app...
 
    info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.year') to initialize the field • lib/data/finance_summary_repository.dart:14:7 • prefer_initializing_formals
    info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.month') to initialize the field • lib/data/finance_summary_repository.dart:15:7 • prefer_initializing_formals
-   info • Use the null-aware marker '?' rather than a null check via an 'if'. Try using '?' • lib/features/auth/presentation/premium_auth_gate.dart:218:13 • use_null_aware_elements
-   info • Use the null-aware marker '?' rather than a null check via an 'if'. Try using '?' • lib/features/auth/presentation/premium_auth_gate_v2.dart:238:13 • use_null_aware_elements
-   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/employees/presentation/widgets/private_data_import_card.dart:94:15 • deprecated_member_use
-   info • Unnecessary braces in a string interpolation. Try removing the braces • lib/features/payments/data/payment_report_exporter.dart:306:31 • unnecessary_brace_in_string_interps
    info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:395:12 • deprecated_member_use
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
-   info • Unnecessary use of multiple underscores. Try using '_' • lib/screens/employee_details_screen.dart:267:45 • unnecessary_underscores
-warning • The declaration '_muted' isn't referenced. Try removing the declaration of '_muted' • lib/screens/employees_screen.dart:19:7 • unused_element
-   info • Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check. Guard a 'State.context' use with a 'mounted' check on the State, and other BuildContext use with a 'mounted' check on the BuildContext • lib/screens/home_screen.dart:440:7 • use_build_context_synchronously
-   info • Unnecessary use of multiple underscores. Try using '_' • lib/screens/home_screen.dart:511:45 • unnecessary_underscores
-   info • Don't use 'BuildContext's across async gaps. Try rewriting the code to not use the 'BuildContext', or guard the use with a 'mounted' check • lib/screens/home_screen.dart:711:38 • use_build_context_synchronously
-warning • The '!' will have no effect because the receiver can't be null. Try removing the '!' operator • lib/screens/object_management_screen.dart:123:45 • unnecessary_non_null_assertion
 
-15 issues found. (ran in 14.0s)
+5 issues found. (ran in 14.5s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -85,6 +76,6 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 21040 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             83.1s
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 21952 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             88.6s
 ✓ Built build/web
