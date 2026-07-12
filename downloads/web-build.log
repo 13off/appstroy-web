@@ -25,7 +25,7 @@ Try `flutter pub outdated` for more information.
 ✅ Функциональный контракт AppСтрой компании можно регистрировать и настраивать самостоятельно
 ✅ Функциональный контракт AppСтрой администратор управляет приглашениями, ролями и объектами
 ✅ Функциональный контракт AppСтрой приглашённый пользователь обязательно задаёт пароль
-✅ Функциональный контракт AppСтрой платформенные экраны сохраняют премиальный стиль и логотип №5
+✅ Функциональный контракт AppСтрой платформенные экраны сохраняют премиальный стиль и финальный логотип
 
 🎉 13 tests passed.
 Resolving dependencies...
@@ -50,7 +50,7 @@ Analyzing skbs_app...
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
 
-5 issues found. (ran in 14.5s)
+5 issues found. (ran in 13.3s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -75,7 +75,7 @@ package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported
 Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
 
 Use --no-wasm-dry-run to disable these warnings.
-Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 21952 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             88.6s
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             79.5s
 ✓ Built build/web
