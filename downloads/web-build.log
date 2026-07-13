@@ -49,9 +49,8 @@ Analyzing skbs_app...
    info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:395:12 • deprecated_member_use
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
-warning • The declaration '_GoldenRatioLogoPainter' isn't referenced. Try removing the declaration of '_GoldenRatioLogoPainter' • lib/widgets/premium_surfaces_v3.dart:159:7 • unused_element
 
-6 issues found. (ran in 14.2s)
+5 issues found. (ran in 14.6s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -78,5 +77,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 21748 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             88.5s
+Compiling lib/main.dart for the Web...                             84.9s
 ✓ Built build/web
