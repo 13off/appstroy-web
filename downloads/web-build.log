@@ -28,80 +28,61 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой приглашённый пользователь обязательно задаёт пароль
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой платформенные экраны сохраняют премиальный стиль и финальный логотип
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой изменения данных сразу доходят до всех открытых экранов
-::group::❌ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании (failed)
-Expected: contains '__FIREBASE_WEB_APP_ID__'
-  Actual: '/*\n'
-            ' * Firebase Messaging service worker for AppСтрой PWA.\n'
-            ' * Public Firebase values are injected by GitHub Actions during the web build.\n'
-            ' * No service account, service-role key or APNs secret belongs in this file.\n'
-            ' */\n'
-            '\n'
-            'const firebaseConfig = {\n'
-            '  apiKey: "",\n'
-            '  authDomain: "",\n'
-            '  projectId: "",\n'
-            '  storageBucket: "",\n'
-            '  messagingSenderId: "",\n'
-            '  appId: "",\n'
-            '};\n'
-            'const appPublicUrl = "https://13off.github.io/appstroy-web/";\n'
-            '\n'
-            'self.addEventListener("notificationclick", (event) => {\n'
-            '  event.notification.close();\n'
-            '  const fcmMessage = event.notification.data?.FCM_MSG;\n'
-            '  const target =\n'
-            '    event.notification.data?.link ||\n'
-            '    fcmMessage?.fcmOptions?.link ||\n'
-            '    fcmMessage?.data?.link ||\n'
-            '    appPublicUrl;\n'
-            '\n'
-            '  event.waitUntil(\n'
-            '    clients.matchAll({ type: "window", includeUncontrolled: true }).then((windows) => {\n'
-            '      for (const client of windows) {\n'
-            '        if ("focus" in client) {\n'
-            '          client.navigate(target);\n'
-            '          return client.focus();\n'
-            '        }\n'
-            '      }\n'
-            '      return clients.openWindow ? clients.openWindow(target) : undefined;\n'
-            '    }),\n'
-            '  );\n'
-            '});\n'
-            '\n'
-            'const configured = Object.values(firebaseConfig).every(\n'
-            '  (value) => value && !value.startsWith("__FIREBASE_"),\n'
-            ');\n'
-            '\n'
-            'if (configured) {\n'
-            '  importScripts("https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js");\n'
-            '  importScripts("https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging-compat.js");\n'
-            '\n'
-            '  firebase.initializeApp(firebaseConfig);\n'
-            '  const messaging = firebase.messaging();\n'
-            '\n'
-            '  messaging.onBackgroundMessage((payload) => {\n'
-            '    // Notification payloads are displayed automatically by FCM. This fallback\n'
-            '    // is only for future data-only messages and deliberately avoids duplicates.\n'
-            '    if (payload.notification) return;\n'
-            '\n'
-            '    const title = payload.data?.title || "AppСтрой";\n'
-            '    const body = payload.data?.body || "В приложении есть новое уведомление";\n'
-            '    self.registration.showNotification(title, {\n'
-            '      body,\n'
-            '      icon: `${appPublicUrl.replace(/\\/$/, "")}/icons/AppStroy-192-v2.png`,\n'
-            '      badge: `${appPublicUrl.replace(/\\/$/, "")}/icons/AppStroy-192-v2.png`,\n'
-            '      data: { link: appPublicUrl, FCM_MSG: payload },\n'
-            '    });\n'
-            '  });\n'
-            '}\n'
-            ''
-   Which: does not contain '__FIREBASE_WEB_APP_ID__'
-Обязательный push-элемент "__FIREBASE_WEB_APP_ID__" отсутствует в web/firebase-messaging-sw.js
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
 
-package:matcher                                     expect
-package:flutter_test/src/widget_tester.dart 473:18  expect
-test/push_notification_contract_test.dart 10:5      containsAll
-test/push_notification_contract_test.dart 79:5      main.<fn>
-::endgroup::
+🎉 16 tests passed.
+Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.9 available)
+  file_saver 0.2.14 (0.4.0 available)
+  intl 0.19.0 (0.20.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing skbs_app...                                           
 
-::error::15 tests passed, 1 failed.
+   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.year') to initialize the field • lib/data/finance_summary_repository.dart:14:7 • prefer_initializing_formals
+   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.month') to initialize the field • lib/data/finance_summary_repository.dart:15:7 • prefer_initializing_formals
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:448:12 • deprecated_member_use
+   info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
+   info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
+warning • The value of the field '_tokenSubscription' isn't used. Try removing the field, or using it • lib/services/push_notification_service.dart:135:38 • unused_field
+warning • The value of the field '_foregroundSubscription' isn't used. Try removing the field, or using it • lib/services/push_notification_service.dart:136:45 • unused_field
+warning • The value of the field '_openedSubscription' isn't used. Try removing the field, or using it • lib/services/push_notification_service.dart:137:45 • unused_field
+warning • The value of the field '_authSubscription' isn't used. Try removing the field, or using it • lib/services/push_notification_service.dart:138:41 • unused_field
+
+9 issues found. (ran in 12.3s)
+Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.9 available)
+  file_saver 0.2.14 (0.4.0 available)
+  intl 0.19.0 (0.20.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Compiling lib/main.dart for the Web...                          
+Wasm dry run findings:
+Found incompatibilities with WebAssembly.
+
+package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
+package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             70.3s
+✓ Built build/web
