@@ -14,6 +14,7 @@ Got dependencies!
 Try `flutter pub outdated` for more information.
 
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: published shell uses the last known-good visible structure
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: release workflow keeps conflict-safe web publishing enabled
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: standard buttons use one motion surface
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: premium pressables use the same hover and press motion
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell keeps the last known-good visible tab structure
@@ -36,7 +37,7 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой изменения данных сразу доходят до всех открытых экранов
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
 
-🎉 22 tests passed.
+🎉 23 tests passed.
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -61,7 +62,7 @@ Analyzing skbs_app...
    info • The member 'activate' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation • lib/widgets/premium_pressable_v3.dart:59:8 • annotate_overrides
 warning • This method overrides a method annotated as '@mustCallSuper' in 'State', but doesn't invoke the overridden method • lib/widgets/premium_pressable_v3.dart:59:8 • must_call_super
 
-7 issues found. (ran in 15.3s)
+7 issues found. (ran in 13.9s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -88,5 +89,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             90.6s
+Compiling lib/main.dart for the Web...                             83.1s
 ✓ Built build/web
