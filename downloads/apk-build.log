@@ -32,5 +32,3 @@ Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Caught exception: Already watching path: /home/runner/work/skbs_app/skbs_app/android
-Running Gradle task 'assembleRelease'...                          382.2s
-✓ Built build/app/outputs/flutter-apk/app-release.apk (61.1MB)
