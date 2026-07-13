@@ -1,9 +1,1 @@
-Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
-Building com.example.skbsApp for device (ios-release)...
-The following plugins do not support Swift Package Manager for ios:
-  - file_saver
-This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
-Running pod install...                                           1,343ms
-Running Xcode build...                                          
-Xcode build done.                                           107.3s
-✓ Built build/ios/iphoneos/Runner.app (20.3MB)
+Xcode build was not started
