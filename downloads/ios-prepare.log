@@ -1,1 +1,7 @@
-Prepare step did not produce a log
+Old bundle replacements: 6
+New bundle settings: 3
+Old iOS 13 targets replaced: 3
+New iOS 15 targets: 3
+Info.plist settings patched: 3
+Entitlement settings: 3
+Prepared ru.appstroy.mobile for iOS 15 with Runner.entitlements
