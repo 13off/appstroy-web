@@ -15,11 +15,13 @@ Try `flutter pub outdated` for more information.
 
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: published shell uses the last known-good visible structure
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: release workflow keeps conflict-safe web publishing enabled
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: standard buttons use one motion surface
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: premium pressables use the same hover and press motion
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell keeps the last known-good visible tab structure
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: standard buttons use one motion system
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: both premium pressables use identical motion constants
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell body remains unchanged before bottom navigation
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_deployment_contract_test.dart: web deployment runs on source changes and repairs missed bot pushes
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: desktop navigation never consumes the screen body
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: mobile navigation stays compact and keeps all tabs visible
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой роли сохраняют свои вкладки и навигацию без перезагрузки
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой главная сохраняет объекты, архив и финансовую сводку
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой люди сохраняют поиск, разделы, отчёты и позицию списка
@@ -37,7 +39,7 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой изменения данных сразу доходят до всех открытых экранов
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
 
-🎉 23 tests passed.
+🎉 25 tests passed.
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -59,10 +61,8 @@ Analyzing skbs_app...
    info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:448:12 • deprecated_member_use
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
-   info • The member 'activate' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation • lib/widgets/premium_pressable_v3.dart:59:8 • annotate_overrides
-warning • This method overrides a method annotated as '@mustCallSuper' in 'State', but doesn't invoke the overridden method • lib/widgets/premium_pressable_v3.dart:59:8 • must_call_super
 
-7 issues found. (ran in 15.5s)
+5 issues found. (ran in 16.3s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -78,3 +78,16 @@ Got dependencies!
 9 packages have newer versions incompatible with dependency constraints.
 Try `flutter pub outdated` for more information.
 Compiling lib/main.dart for the Web...                          
+Wasm dry run findings:
+Found incompatibilities with WebAssembly.
+
+package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
+package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             88.8s
+✓ Built build/web
