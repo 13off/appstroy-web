@@ -59,12 +59,8 @@ Analyzing skbs_app...
    info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:448:12 • deprecated_member_use
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
-   info • The member 'activate' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation • lib/widgets/premium_pressable_v3.dart:59:8 • annotate_overrides
-warning • This method overrides a method annotated as '@mustCallSuper' in 'State', but doesn't invoke the overridden method • lib/widgets/premium_pressable_v3.dart:59:8 • must_call_super
-   info • The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive • lib/widgets/premium_ui_v2.dart:3:8 • unnecessary_import
-   info • The import of 'package:flutter/services.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive • lib/widgets/premium_ui_v2.dart:5:8 • unnecessary_import
 
-9 issues found. (ran in 13.7s)
+5 issues found. (ran in 14.8s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -91,5 +87,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             85.6s
+Compiling lib/main.dart for the Web...                             85.8s
 ✓ Built build/web
