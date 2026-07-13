@@ -62,7 +62,7 @@ Analyzing skbs_app...
    info • The member 'activate' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation • lib/widgets/premium_pressable_v3.dart:59:8 • annotate_overrides
 warning • This method overrides a method annotated as '@mustCallSuper' in 'State', but doesn't invoke the overridden method • lib/widgets/premium_pressable_v3.dart:59:8 • must_call_super
 
-7 issues found. (ran in 13.7s)
+7 issues found. (ran in 15.5s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -78,16 +78,3 @@ Got dependencies!
 9 packages have newer versions incompatible with dependency constraints.
 Try `flutter pub outdated` for more information.
 Compiling lib/main.dart for the Web...                          
-Wasm dry run findings:
-Found incompatibilities with WebAssembly.
-
-package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
-package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
-
-Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
-
-Use --no-wasm-dry-run to disable these warnings.
-Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             84.8s
-✓ Built build/web
