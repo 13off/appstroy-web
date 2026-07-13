@@ -16,10 +16,10 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: published shell uses the last known-good visible structure
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: release workflow keeps conflict-safe web publishing enabled
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: standard buttons use one motion surface
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: premium pressables use the same hover and press motion
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell keeps the last known-good visible tab structure
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: legacy and current premium buttons use one implementation
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell keeps visible tabs and only polishes bottom navigation
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_deployment_contract_test.dart: web deployment runs on source changes and repairs missed bot pushes
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps visible screens and professional navigation
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой роли сохраняют свои вкладки и навигацию без перезагрузки
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой главная сохраняет объекты, архив и финансовую сводку
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой люди сохраняют поиск, разделы, отчёты и позицию списка
@@ -61,8 +61,10 @@ Analyzing skbs_app...
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
    info • The member 'activate' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation • lib/widgets/premium_pressable_v3.dart:59:8 • annotate_overrides
 warning • This method overrides a method annotated as '@mustCallSuper' in 'State', but doesn't invoke the overridden method • lib/widgets/premium_pressable_v3.dart:59:8 • must_call_super
+   info • The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive • lib/widgets/premium_ui_v2.dart:3:8 • unnecessary_import
+   info • The import of 'package:flutter/services.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive • lib/widgets/premium_ui_v2.dart:5:8 • unnecessary_import
 
-7 issues found. (ran in 13.9s)
+9 issues found. (ran in 13.7s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -89,5 +91,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             83.1s
+Compiling lib/main.dart for the Web...                             85.6s
 ✓ Built build/web
