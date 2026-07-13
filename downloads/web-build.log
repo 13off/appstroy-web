@@ -19,6 +19,10 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: both premium pressables use identical motion constants
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell body remains unchanged before bottom navigation
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_deployment_contract_test.dart: web deployment runs on source changes and repairs missed bot pushes
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: archive bottom actions never hide archived items
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: payment flow selects object before employee
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: main employee and timesheet pages share task profile header
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: timesheet date uses the same premium press motion as tasks
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: desktop navigation never consumes the screen body
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: mobile navigation stays compact and keeps all tabs visible
@@ -39,7 +43,7 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой изменения данных сразу доходят до всех открытых экранов
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
 
-🎉 25 tests passed.
+🎉 29 tests passed.
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -62,7 +66,7 @@ Analyzing skbs_app...
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
 
-5 issues found. (ran in 14.7s)
+5 issues found. (ran in 12.5s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -89,5 +93,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23408 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             85.6s
+Compiling lib/main.dart for the Web...                             73.5s
 ✓ Built build/web
