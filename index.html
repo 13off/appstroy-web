@@ -14,8 +14,7 @@
   <div>Загрузка AppСтрой…</div>
   <script>
     (function () {
-      var scopeKey = 'appstroy:last-employee-object-scope';
-      var pendingKey = 'appstroy:payments-scope-pending';
+      var scopeKey = 'appstroy:selected-object-scope-v2';
       var originalFetch = window.fetch.bind(window);
       var originalXhrOpen = XMLHttpRequest.prototype.open;
 
@@ -27,39 +26,40 @@
         try { sessionStorage.setItem(scopeKey, value || ''); } catch (_) {}
       }
 
-      function readPending() {
-        try { return sessionStorage.getItem(pendingKey) === '1'; } catch (_) { return false; }
-      }
-
-      function writePending(value) {
-        try { sessionStorage.setItem(pendingKey, value ? '1' : '0'); } catch (_) {}
-      }
-
       function cleanEq(value) {
         if (!value) return '';
         return value.indexOf('eq.') === 0 ? value.slice(3) : value;
       }
 
-      function patchEmployeesUrl(value) {
+      function patchApiUrl(value) {
         try {
           var url = new URL(value, window.location.href);
-          if (url.pathname.indexOf('/rest/v1/employees') === -1) return value;
+          if (url.pathname.indexOf('/rest/v1/') === -1) return value;
 
           var objectFilter = url.searchParams.get('object_name');
-          var activeFilter = url.searchParams.get('is_active');
-
-          if (objectFilter || !activeFilter) {
+          if (objectFilter) {
             writeScope(cleanEq(objectFilter));
-            writePending(true);
-            return url.toString();
           }
 
-          if (!objectFilter && activeFilter === 'eq.true' && readPending()) {
-            var objectName = readScope();
-            url.searchParams.delete('is_active');
-            if (objectName) url.searchParams.set('object_name', 'eq.' + objectName);
-            writePending(false);
-            return url.toString();
+          var scope = readScope();
+          if (!scope) return url.toString();
+
+          if (url.pathname.indexOf('/rest/v1/employees') !== -1) {
+            if (!objectFilter) {
+              url.searchParams.set('object_name', 'eq.' + scope);
+            }
+
+            if (url.searchParams.get('is_active') === 'eq.true' && !objectFilter) {
+              url.searchParams.delete('is_active');
+            }
+          }
+
+          if (url.pathname.indexOf('/rest/v1/attendance') !== -1 && !objectFilter) {
+            url.searchParams.set('object_name', 'eq.' + scope);
+          }
+
+          if (url.pathname.indexOf('/rest/v1/tasks') !== -1 && !objectFilter) {
+            url.searchParams.set('object_name', 'eq.' + scope);
           }
 
           return url.toString();
@@ -71,20 +71,20 @@
       window.fetch = function (input, init) {
         if (input instanceof Request) {
           return originalFetch(
-            new Request(patchEmployeesUrl(input.url), input),
+            new Request(patchApiUrl(input.url), input),
             init
           );
         }
-        return originalFetch(patchEmployeesUrl(String(input)), init);
+        return originalFetch(patchApiUrl(String(input)), init);
       };
 
       XMLHttpRequest.prototype.open = function (method, url) {
         var args = Array.prototype.slice.call(arguments);
-        args[1] = patchEmployeesUrl(String(url));
+        args[1] = patchApiUrl(String(url));
         return originalXhrOpen.apply(this, args);
       };
 
-      originalFetch('404.html?v=payments-scope-3', { cache: 'no-store' })
+      originalFetch('404.html?v=object-scope-v4', { cache: 'no-store' })
         .then(function (response) {
           if (!response.ok) throw new Error('Не удалось загрузить приложение');
           return response.text();
