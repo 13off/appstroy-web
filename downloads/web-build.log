@@ -1,0 +1,111 @@
+Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.9 available)
+  file_saver 0.2.14 (0.4.0 available)
+  intl 0.19.0 (0.20.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+10 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_redirect_contract_test.dart: company invitations always return to the production web app
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: admin receives a copyable company invitation link
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: edge function creates invite recovery and magic action links
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: invitation link activates its company before profile loading
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: repeat login restores a missing active company from membership
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: published shell uses the last known-good visible structure
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: release workflow keeps conflict-safe web publishing enabled
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ios_unsigned_workflow_contract_test.dart: unsigned iOS workflow accepts only completed Xcode signing validation
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: standard buttons use one motion system
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: both premium pressables use identical motion constants
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ui_motion_contract_test.dart: shell body remains unchanged before bottom navigation
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_deployment_contract_test.dart: web deployment runs on source changes and repairs missed bot pushes
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: archive bottom actions never hide archived items
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: payment flow selects object before employee
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: main employee and timesheet pages share task profile header
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/archive_payment_page_contract_test.dart: timesheet date uses the same premium press motion as tasks
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/remove_company_member_contract_test.dart: admin can remove a non-owner member from one company
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/browser_history_title_contract_test.dart: browser history always receives a non-null document title
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой роли сохраняют свои вкладки и навигацию без перезагрузки
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой главная сохраняет объекты, архив и финансовую сводку
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой люди сохраняют поиск, разделы, отчёты и позицию списка
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой карточка сотрудника сохраняет все критичные действия
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой табель сохраняет быстрый ввод, ручной ввод и отчёты
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой выплаты сохраняют добавление, фильтры, чеки и единый XLSX
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой задачи сохраняют фото, статусы, редактирование и акт
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой уведомления остаются персональными и ограниченными для прораба
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой архив сохраняет восстановление и окончательное удаление
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой компании можно регистрировать и настраивать самостоятельно
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой администратор управляет приглашениями, ролями и объектами
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой тарифы и заявки сохраняют бизнес-контур компании
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой приглашённый пользователь обязательно задаёт пароль
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой платформенные экраны сохраняют премиальный стиль и финальный логотип
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/functional_contract_test.dart: Функциональный контракт AppСтрой изменения данных сразу доходят до всех открытых экранов
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: desktop navigation never consumes the screen body
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: mobile navigation stays compact and keeps all tabs visible
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_token_link_contract_test.dart: invitation link bypasses localhost and uses a production token flow
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_token_link_contract_test.dart: production invitation page consumes the token only after user action
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
+
+🎉 39 tests passed.
+Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.9 available)
+  file_saver 0.2.14 (0.4.0 available)
+  intl 0.19.0 (0.20.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+10 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing skbs_app...                                           
+
+   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.year') to initialize the field • lib/data/finance_summary_repository.dart:14:7 • prefer_initializing_formals
+   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.month') to initialize the field • lib/data/finance_summary_repository.dart:15:7 • prefer_initializing_formals
+warning • The receiver can't be null, so the null-aware operator '?.' is unnecessary. Try replacing the operator '?.' with '.' • lib/features/auth/data/user_repository.dart:38:38 • invalid_null_aware_operator
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:448:12 • deprecated_member_use
+   info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
+   info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
+
+6 issues found. (ran in 12.0s)
+Resolving dependencies...
+Downloading packages...
+  archive 3.6.1 (4.0.9 available)
+  file_saver 0.2.14 (0.4.0 available)
+  intl 0.19.0 (0.20.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+10 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Compiling lib/main.dart for the Web...                          
+Wasm dry run findings:
+Found incompatibilities with WebAssembly.
+
+package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
+package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
+
+Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
+
+Use --no-wasm-dry-run to disable these warnings.
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 23756 bytes (98.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib/main.dart for the Web...                             50.9s
+✓ Built build/web
