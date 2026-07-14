@@ -15,10 +15,10 @@ Got dependencies!
 Try `flutter pub outdated` for more information.
 
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: admin receives a copyable company invitation link
+✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_redirect_contract_test.dart: company invitations always return to the production web app
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: edge function creates invite recovery and magic action links
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: invitation link activates its company before profile loading
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_links_session_contract_test.dart: repeat login restores a missing active company from membership
-✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_redirect_contract_test.dart: company invitations always return to the production web app
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: published shell uses the last known-good visible structure
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/stable_shell_release_contract_test.dart: release workflow keeps conflict-safe web publishing enabled
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ios_unsigned_workflow_contract_test.dart: unsigned iOS workflow accepts only completed Xcode signing validation
@@ -92,7 +92,7 @@ warning • The receiver can't be null, so the null-aware operator '?.' is unnec
    info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
    info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
 
-7 issues found. (ran in 12.3s)
+7 issues found. (ran in 12.9s)
 Resolving dependencies...
 Downloading packages...
   archive 3.6.1 (4.0.9 available)
@@ -120,5 +120,5 @@ Consider addressing these issues to enable wasm builds. See docs for more info: 
 Use --no-wasm-dry-run to disable these warnings.
 Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 24724 bytes (98.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             51.2s
+Compiling lib/main.dart for the Web...                             53.4s
 ✓ Built build/web
