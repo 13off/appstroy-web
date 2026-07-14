@@ -29,7 +29,7 @@ Preparing "Install CMake 3.22.1 v.3.22.1".
 Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
 "Install CMake 3.22.1 v.3.22.1" complete.
 "Install CMake 3.22.1 v.3.22.1" finished.
-lib/features/auth/data/user_repository.dart:94:21: Error: The argument type 'String?' can't be assigned to the parameter type 'String'.
+lib/features/auth/data/user_repository.dart:90:21: Error: The argument type 'String?' can't be assigned to the parameter type 'String'.
       html.document.title,
                     ^
 Target kernel_snapshot_program failed: Exception
@@ -47,6 +47,6 @@ Execution failed for task ':app:compileFlutterBuildRelease'.
 > Run with --scan to generate a Build Scan (Powered by Develocity).
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 1m 30s
-Running Gradle task 'assembleRelease'...                           92.5s
+BUILD FAILED in 1m 46s
+Running Gradle task 'assembleRelease'...                          107.3s
 Gradle task assembleRelease failed with exit code 1
