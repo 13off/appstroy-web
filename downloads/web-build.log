@@ -58,65 +58,21 @@ Try `flutter pub outdated` for more information.
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/professional_bottom_navigation_test.dart: mobile navigation stays compact and keeps all tabs visible
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_token_link_contract_test.dart: invitation link bypasses localhost and uses a production token flow
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/invitation_token_link_contract_test.dart: production invitation page consumes the token only after user action
+test/russian_invitation_route_contract_test.dart:35:26: Error: Undefined name 'PROXY_DOMAIN'.
+      contains('https://$PROXY_DOMAIN/app/invite.html'),
+                         ^^^^^^^^^^^^
+::group::❌ loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart (failed)
+Failed to load "/home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart":
+Compilation failed for testPath=/home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: test/russian_invitation_route_contract_test.dart:35:26: Error: Undefined name 'PROXY_DOMAIN'.
+      contains('https://$PROXY_DOMAIN/app/invite.html'),
+                         ^^^^^^^^^^^^
+.
+
+::endgroup::
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_universal_search_contract_test.dart: chat routes free search to ai-search and keeps structured scenarios
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_universal_search_contract_test.dart: universal search covers application data sources
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_universal_search_contract_test.dart: search understands periods and natural Russian queries
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_universal_search_contract_test.dart: search stays company scoped read only and protects private data
 ✅ /home/runner/work/skbs_app/skbs_app/skbs_app/test/push_notification_contract_test.dart: push работает поверх внутреннего колокольчика и защищает компании
 
-🎉 49 tests passed.
-Resolving dependencies...
-Downloading packages...
-  archive 3.6.1 (4.0.9 available)
-  file_saver 0.2.14 (0.4.0 available)
-  intl 0.19.0 (0.20.3 available)
-  matcher 0.12.19 (0.12.20 available)
-  meta 1.18.0 (1.19.0 available)
-  package_config 2.2.0 (3.0.0 available)
-  shared_preferences_android 2.4.26 (2.4.27 available)
-  test_api 0.7.11 (0.7.13 available)
-  vector_math 2.2.0 (2.4.0 available)
-  xml 6.6.1 (7.0.1 available)
-Got dependencies!
-10 packages have newer versions incompatible with dependency constraints.
-Try `flutter pub outdated` for more information.
-Analyzing skbs_app...                                           
-
-   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.year') to initialize the field • lib/data/finance_summary_repository.dart:14:7 • prefer_initializing_formals
-   info • Use an initializing formal to assign a parameter to a field. Try using an initialing formal ('this.month') to initialize the field • lib/data/finance_summary_repository.dart:15:7 • prefer_initializing_formals
-warning • A value for optional parameter 'reviewed' isn't ever given. Try removing the unused parameter • lib/features/ai/presentation/ai_assistant_screen.dart:425:10 • unused_element_parameter
-warning • The receiver can't be null, so the null-aware operator '?.' is unnecessary. Try replacing the operator '?.' with '.' • lib/features/auth/data/user_repository.dart:38:38 • invalid_null_aware_operator
-   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre. Try replacing the use of the deprecated member with the replacement • lib/features/shell/presentation/premium_main_screen.dart:448:12 • deprecated_member_use
-   info • 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead. Try replacing the use of the deprecated member with the replacement • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • deprecated_member_use
-   info • Don't use web-only libraries outside Flutter web plugins. Try finding a different library for your needs • lib/navigation/web_edge_swipe_platform_web.dart:2:1 • avoid_web_libraries_in_flutter
-
-7 issues found. (ran in 13.1s)
-Resolving dependencies...
-Downloading packages...
-  archive 3.6.1 (4.0.9 available)
-  file_saver 0.2.14 (0.4.0 available)
-  intl 0.19.0 (0.20.3 available)
-  matcher 0.12.19 (0.12.20 available)
-  meta 1.18.0 (1.19.0 available)
-  package_config 2.2.0 (3.0.0 available)
-  shared_preferences_android 2.4.26 (2.4.27 available)
-  test_api 0.7.11 (0.7.13 available)
-  vector_math 2.2.0 (2.4.0 available)
-  xml 6.6.1 (7.0.1 available)
-Got dependencies!
-10 packages have newer versions incompatible with dependency constraints.
-Try `flutter pub outdated` for more information.
-Compiling lib/main.dart for the Web...                          
-Wasm dry run findings:
-Found incompatibilities with WebAssembly.
-
-package:universal_html/src/_sdk/html.dart 32:1 - dart:html unsupported (0)
-package:universal_html/src/_sdk_html_additions.dart 16:1 - dart:html unsupported (0)
-
-Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
-
-Use --no-wasm-dry-run to disable these warnings.
-Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 24724 bytes (98.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
-Compiling lib/main.dart for the Web...                             52.7s
-✓ Built build/web
+::error::49 tests passed, 1 failed.
