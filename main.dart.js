@@ -37042,7 +37042,7 @@ o=B.b.t(b)
 n=B.b.t(a)
 m=t.N
 s=3
-return A.i(h.lA("invite-company-member",A.Z(["company_id",a,"full_name",p,"email",o,"role",e,"object_id",d,"redirect_to",A.er("https://13off.github.io/appstroy-web/",0,null).KC(0,"",A.Z(["companyInvite",n],m,m)).gm0()],m,t.z)),$async$am2)
+return A.i(h.lA("invite-company-member",A.Z(["company_id",a,"full_name",p,"email",o,"role",e,"object_id",d,"redirect_to",A.er("https://api.appstroy-web.ru/app/",0,null).KC(0,"",A.Z(["companyInvite",n],m,m)).gm0()],m,t.z)),$async$am2)
 case 3:l=g
 k=A.Bc(l.a)
 m=J.a7(k)
