@@ -1,0 +1,81 @@
+name: Deploy notification center web
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/deploy-notification-center.yml
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          repository: 13off/skbs_app
+          ref: main
+          path: source
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: source/.fvmrc
+          cache: true
+
+      - name: Build web
+        working-directory: source
+        run: |
+          flutter pub get --enforce-lockfile
+          flutter build web --release --base-href /appstroy-web/
+
+      - name: Checkout published site
+        uses: actions/checkout@v4
+        with:
+          path: site
+          fetch-depth: 0
+
+      - name: Publish build
+        shell: bash
+        run: |
+          SOURCE_SHA=$(git -C source rev-parse HEAD)
+          SHORT_SHA=${SOURCE_SHA:0:12}
+
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='downloads/' \
+            source/build/web/ site/
+
+          python3 - "$SHORT_SHA" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          version = sys.argv[1]
+          index = Path('site/index.html')
+          text = index.read_text(encoding='utf-8')
+          text = re.sub(r'manifest\.json(?:\?v=[^"\']+)?', f'manifest.json?v={version}', text)
+          text = re.sub(r'flutter_bootstrap\.js(?:\?v=[^"\']+)?', f'flutter_bootstrap.js?v={version}', text)
+          index.write_text(text, encoding='utf-8')
+
+          bootstrap = Path('site/flutter_bootstrap.js')
+          text = bootstrap.read_text(encoding='utf-8')
+          text = re.sub(r'main\.dart\.js(?:\?v=[^"\']+)?', f'main.dart.js?v={version}', text)
+          bootstrap.write_text(text, encoding='utf-8')
+          PY
+
+          mkdir -p site/downloads
+          printf '%s\n' "$SOURCE_SHA" > site/downloads/web-source-commit.txt
+          printf 'success\n' > site/downloads/web-build-status.txt
+          rm -f site/.github/workflows/deploy-notification-center.yml
+
+          git -C site config user.name "github-actions[bot]"
+          git -C site config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C site add -A
+          git -C site commit -m "Опубликован центр управления уведомлениями"
+          git -C site push origin HEAD:main
