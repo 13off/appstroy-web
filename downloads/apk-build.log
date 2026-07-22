@@ -43,9 +43,9 @@ Preparing "Install CMake 3.22.1 v.3.22.1".
 Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
 "Install CMake 3.22.1 v.3.22.1" complete.
 "Install CMake 3.22.1 v.3.22.1" finished.
-Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 40896 bytes (97.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 41164 bytes (97.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Caught exception: Already watching path: /home/runner/work/skbs_app/skbs_app/android
-Running Gradle task 'assembleRelease'...                          235.4s
+Running Gradle task 'assembleRelease'...                          180.3s
 ✓ Built build/app/outputs/flutter-apk/app-release.apk (71.0MB)
