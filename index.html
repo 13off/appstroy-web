@@ -4,6 +4,62 @@
   <base href="/appstroy-web/">
 
   <meta charset="UTF-8">
+
+  <script id="appstroy-locale-guard">
+    (function () {
+      var fallbackLocale = 'ru-RU';
+      var normalizeLocale = function (value) {
+        if (typeof value !== 'string') return fallbackLocale;
+
+        var clean = value
+          .trim()
+          .replace(/_/g, '-')
+          .replace(/@.*$/, '');
+        if (!clean) return fallbackLocale;
+
+        try {
+          return new Intl.Locale(clean).toString();
+        } catch (_) {
+          var language = clean.split('-')[0].toLowerCase();
+          return /^[a-z]{2,3}$/.test(language) ? language : fallbackLocale;
+        }
+      };
+
+      var sourceLanguages = Array.isArray(navigator.languages)
+        ? navigator.languages
+        : [navigator.language];
+      var normalizedLanguages = sourceLanguages
+        .map(normalizeLocale)
+        .filter(function (value, index, values) {
+          return values.indexOf(value) === index;
+        });
+      var normalizedLanguage = normalizeLocale(navigator.language);
+      if (normalizedLanguages.length === 0) {
+        normalizedLanguages = [normalizedLanguage];
+      }
+
+      var overrideNavigatorValue = function (target, key, value) {
+        if (!target) return false;
+        try {
+          Object.defineProperty(target, key, {
+            configurable: true,
+            get: function () { return value; }
+          });
+          return true;
+        } catch (_) {
+          return false;
+        }
+      };
+
+      var navigatorPrototype = window.Navigator && window.Navigator.prototype;
+      overrideNavigatorValue(navigatorPrototype, 'language', normalizedLanguage);
+      overrideNavigatorValue(navigatorPrototype, 'languages', normalizedLanguages);
+      overrideNavigatorValue(navigator, 'language', normalizedLanguage);
+      overrideNavigatorValue(navigator, 'languages', normalizedLanguages);
+
+      window.appstroyBrowserLocale = normalizedLanguage;
+    })();
+  </script>
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta
     name="viewport"
@@ -25,7 +81,7 @@
   <link id="app-favicon-svg" rel="icon" type="image/svg+xml" href="icons/app_icon_matte_v2.svg">
 
   <title>AppСтрой</title>
-  <link id="app-manifest" rel="manifest" href="manifest.json?v=3ed1523004cd">
+  <link id="app-manifest" rel="manifest" href="manifest.json?v=d9359c4edee0">
 
   <script>
     (function () {
@@ -35,7 +91,7 @@
         icon: 'icons/app_icon_matte_v2.svg',
         appleIcon: 'icons/AppStroy-192-v2.png',
         pngIcon: 'favicon-v2.png',
-        manifest: 'manifest.json?v=3ed1523004cd',
+        manifest: 'manifest.json?v=d9359c4edee0',
         statusBar: 'default'
       };
       var darkTheme = {
@@ -491,6 +547,6 @@
     })();
   </script>
 
-  <script src="flutter_bootstrap.js?v=3ed1523004cd" async></script>
+  <script src="flutter_bootstrap.js?v=d9359c4edee0" async></script>
 </body>
 </html>
