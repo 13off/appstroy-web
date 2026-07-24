@@ -1,0 +1,241 @@
+/* Photo-led recruitment layout. Temporary generated images can be replaced in assets/ without rebuilding the page. */
+.photo-section,
+.photo-story {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #080808;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo-section::before,
+.photo-story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: inherit;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.035);
+  transition: transform 1.4s var(--ease);
+}
+
+.photo-section::after,
+.photo-story::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.photo-section--hero {
+  min-height: calc(100svh - 78px);
+  background-image: url("assets/hero-worker-cranes.svg");
+  background-position: 62% center;
+}
+
+.photo-section--hero::after {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, .97) 0%, rgba(5, 5, 5, .87) 40%, rgba(5, 5, 5, .30) 72%, rgba(5, 5, 5, .48) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .18) 0%, rgba(0, 0, 0, .06) 56%, #080808 100%);
+}
+
+.photo-section--hero .hero-grid {
+  grid-template-columns: minmax(0, 780px);
+  justify-content: start;
+}
+
+.photo-section--hero .hero-content {
+  padding: 42px 0 62px;
+  text-shadow: 0 4px 28px rgba(0,0,0,.7);
+}
+
+.photo-section--hero .hero-lead {
+  color: rgba(245, 241, 232, .76);
+}
+
+.photo-section--hero .hero-facts {
+  max-width: 720px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 20px;
+  background: rgba(8,8,8,.50);
+  box-shadow: 0 24px 70px rgba(0,0,0,.28);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.photo-section--hero .hero-facts div + div {
+  border-left-color: rgba(255,255,255,.11);
+}
+
+.photo-story {
+  min-height: min(760px, 82svh);
+  display: grid;
+  align-items: end;
+  background-image: url("assets/concrete-team.svg");
+  background-position: center 42%;
+  border-block: 1px solid rgba(255,255,255,.07);
+}
+
+.photo-story::after {
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.92) 0%, rgba(5,5,5,.54) 50%, rgba(5,5,5,.18) 100%),
+    linear-gradient(180deg, rgba(8,8,8,.08), rgba(8,8,8,.18) 56%, rgba(8,8,8,.90));
+}
+
+.photo-story__inner {
+  max-width: 1180px;
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+  padding: 110px 0 92px;
+}
+
+.photo-story__inner h2 {
+  max-width: 820px;
+  margin-bottom: 24px;
+  font-size: clamp(48px, 7vw, 94px);
+  text-shadow: 0 8px 44px rgba(0,0,0,.72);
+}
+
+.photo-story__inner p {
+  max-width: 600px;
+  margin-bottom: 28px;
+  color: rgba(245,241,232,.72);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.photo-section--conditions {
+  background-image: url("assets/rebar-worker.svg");
+  background-position: 64% center;
+  border-block: 1px solid rgba(255,255,255,.07);
+}
+
+.photo-section--conditions::after {
+  background:
+    linear-gradient(90deg, rgba(6,6,6,.96) 0%, rgba(6,6,6,.86) 43%, rgba(6,6,6,.54) 72%, rgba(6,6,6,.70) 100%),
+    linear-gradient(180deg, rgba(8,8,8,.18), rgba(8,8,8,.76));
+}
+
+.photo-section--conditions .conditions-copy {
+  padding: 34px 0;
+}
+
+.photo-section--conditions .conditions-copy p {
+  color: rgba(245,241,232,.72);
+}
+
+.photo-section--conditions .benefit-card {
+  border-color: rgba(255,255,255,.12);
+  background: rgba(9,9,9,.68);
+  box-shadow: 0 20px 60px rgba(0,0,0,.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.photo-section--application {
+  background-image: url("assets/excavator-worker.svg");
+  background-position: 70% center;
+  padding-block: 112px;
+}
+
+.photo-section--application::after {
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.94) 0%, rgba(5,5,5,.74) 46%, rgba(5,5,5,.48) 100%),
+    linear-gradient(180deg, rgba(8,8,8,.34), rgba(8,8,8,.82));
+}
+
+.photo-section--application .application-shell {
+  border-color: rgba(216,173,85,.28);
+  background: rgba(10,10,10,.70);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.photo-section--faq {
+  background-image: url("assets/hero-worker-cranes.svg");
+  background-position: center 62%;
+}
+
+.photo-section--faq::after {
+  background: linear-gradient(180deg, #080808 0%, rgba(8,8,8,.91) 26%, rgba(8,8,8,.84) 100%);
+}
+
+.photo-section--faq .faq-item {
+  background: rgba(8,8,8,.40);
+}
+
+@media (min-width: 981px) {
+  .photo-section--hero h1 {
+    max-width: 930px;
+    font-size: clamp(62px, 7vw, 108px);
+  }
+}
+
+@media (max-width: 980px) {
+  .photo-section--hero {
+    background-position: 68% center;
+  }
+  .photo-section--hero::after {
+    background:
+      linear-gradient(90deg, rgba(5,5,5,.95) 0%, rgba(5,5,5,.78) 62%, rgba(5,5,5,.42) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.18), #080808 100%);
+  }
+  .photo-story {
+    min-height: 680px;
+    background-position: 56% center;
+  }
+  .photo-section--conditions,
+  .photo-section--application {
+    background-position: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .photo-section--hero {
+    min-height: calc(100svh - 68px);
+    background-position: 72% center;
+  }
+  .photo-section--hero::after {
+    background:
+      linear-gradient(90deg, rgba(5,5,5,.93) 0%, rgba(5,5,5,.70) 78%, rgba(5,5,5,.54) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(8,8,8,.35) 60%, #080808 100%);
+  }
+  .photo-section--hero .hero-content {
+    padding: 18px 0 38px;
+  }
+  .photo-section--hero .hero-facts {
+    padding: 18px;
+    background: rgba(8,8,8,.64);
+  }
+  .photo-section--hero .hero-facts div + div {
+    border-left: 0;
+    border-top-color: rgba(255,255,255,.10);
+  }
+  .photo-story {
+    min-height: 650px;
+    background-position: 58% center;
+  }
+  .photo-story::after {
+    background: linear-gradient(180deg, rgba(5,5,5,.22), rgba(5,5,5,.58) 50%, rgba(5,5,5,.96));
+  }
+  .photo-story__inner {
+    width: min(100% - 28px, 1180px);
+    padding: 100px 0 64px;
+  }
+  .photo-story__inner h2 {
+    font-size: clamp(42px, 13vw, 62px);
+  }
+  .photo-section--conditions::after,
+  .photo-section--application::after {
+    background: linear-gradient(180deg, rgba(5,5,5,.72), rgba(5,5,5,.94));
+  }
+  .photo-section--application {
+    padding-block: 76px;
+  }
+}
