@@ -36,7 +36,7 @@
   </header>
 
   <main>
-    <section class="hero section">
+    <section class="hero section photo-section photo-section--hero">
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <div class="eyebrow"><span></span> Прямой набор на строительные объекты</div>
@@ -52,26 +52,6 @@
             <div><strong>180 000 ₽+</strong><span>заработок в месяц</span></div>
             <div><strong>Проживание</strong><span>предоставляется</span></div>
             <div><strong>Проезд</strong><span>по согласованию</span></div>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal reveal--delay" aria-hidden="true">
-          <div class="visual-frame">
-            <div class="visual-grid"></div>
-            <div class="visual-orbit visual-orbit--one"></div>
-            <div class="visual-orbit visual-orbit--two"></div>
-            <div class="visual-tower visual-tower--left"></div>
-            <div class="visual-tower visual-tower--center"></div>
-            <div class="visual-tower visual-tower--right"></div>
-            <div class="visual-card visual-card--top">
-              <span class="status-dot"></span>
-              <div><small>Набор открыт</small><strong>Ближайший заезд</strong></div>
-            </div>
-            <div class="visual-card visual-card--bottom">
-              <span class="visual-icon">↗</span>
-              <div><small>Заявка за</small><strong>2 минуты</strong></div>
-            </div>
-            <div class="visual-badge">СКБС</div>
           </div>
         </div>
       </div>
@@ -138,7 +118,16 @@
       </div>
     </section>
 
-    <section class="section section--muted" id="conditions">
+    <section class="photo-story photo-story--team" aria-label="Работа на строительном объекте">
+      <div class="container photo-story__inner reveal">
+        <div class="eyebrow"><span></span> Люди и реальные объекты</div>
+        <h2>Работа, которую<br>видно в результате</h2>
+        <p>Сейчас здесь временные кадры. Позже заменим их фотографиями ваших бригад, объектов, проживания и рабочих процессов.</p>
+        <a class="button button--gold" href="#application">Оставить заявку</a>
+      </div>
+    </section>
+
+    <section class="section photo-section photo-section--conditions" id="conditions">
       <div class="container conditions-grid">
         <div class="conditions-copy reveal">
           <div class="eyebrow"><span></span> Что получает сотрудник</div>
@@ -187,7 +176,7 @@
       </div>
     </section>
 
-    <section class="section application-section" id="application">
+    <section class="section application-section photo-section photo-section--application" id="application">
       <div class="container application-shell reveal">
         <div class="application-copy">
           <div class="eyebrow"><span></span> Отклик на вакансию</div>
@@ -196,7 +185,7 @@
           <div class="privacy-note"><span>✓</span> Данные используются только для связи по трудоустройству.</div>
         </div>
 
-        <form class="application-form" name="job-application" method="POST" data-netlify="true" netlify-honeypot="company-site" action="/success.html">
+        <form class="application-form" name="job-application" method="POST" data-netlify="true" netlify-honeypot="company-site" action="success.html">
           <input type="hidden" name="form-name" value="job-application">
           <p class="hidden-field"><label>Не заполняйте: <input name="company-site"></label></p>
 
@@ -265,7 +254,7 @@
       </div>
     </section>
 
-    <section class="section faq-section">
+    <section class="section faq-section photo-section photo-section--faq">
       <div class="container faq-grid">
         <div class="reveal">
           <div class="eyebrow"><span></span> Ответы на вопросы</div>
