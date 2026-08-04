@@ -212945,13 +212945,13 @@ k=A.cEJ(!1,p,e.c,q,o,152)
 j=e.d
 i=j.ok
 h=i.c
-h=A.d("App\u0421\u0442\u0440\u043e\u0439",d,1,d,d,d,h==null?d:h.a4S(j.ax.k3,46,B.bC,0.98,-2.1),d,d,d,d)
+h=A.d("App\u0421\u0442\u0440\u043e\u0439",d,1,d,d,d,h==null?d:h.a4S(j.ax.k3,56,B.bC,0.98,-2.4),d,d,d,d)
 i=i.z
 if(i==null)i=d
 else{g=j.ax
 f=g.rx
-i=i.a4S(f==null?g.k3:f,12.5,B.B,1.1,1.05)}g=t.p
-i=A.a([A.Q(A.a([k,A.wA(new A.dl(B.aL,n,d,A.rY(A.qC(new A.U(B.ahW,new A.L(210,d,A.D(A.a([h,B.x,A.rY(A.qC(A.d("\u043f\u043b\u0430\u043d\u0438\u0440\u0443\u0439. \u0441\u0442\u0440\u043e\u0439. \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0439.",d,1,d,d,d,i,d,d,d,d),new A.y(-14*(1-m),0)),m)],g),B.t,B.f,B.R,0,B.j),d),d),new A.y(-22*(1-n),0)),n),d),B.n,d)],g),B.k,d,B.f,B.R,0,d)],g)
+i=i.a4S(f==null?g.k3:f,18,B.B,1.1,0.2)}g=t.p
+i=A.a([A.Q(A.a([k,A.wA(new A.dl(B.aL,n,d,A.rY(A.qC(new A.U(B.ahW,new A.L(260,d,A.D(A.a([h,B.J,A.rY(A.qC(A.d("\u043f\u043b\u0430\u043d\u0438\u0440\u0443\u0439 \u2022 \u0441\u0442\u0440\u043e\u0439 \u2022 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0439",d,1,d,d,d,i,d,d,d,d),new A.y(-14*(1-m),0)),m)],g),B.t,B.f,B.R,0,B.j),d),d),new A.y(-22*(1-n),0)),n),d),B.n,d)],g),B.k,d,B.f,B.R,0,d)],g)
 if(r.a.d)B.c.B(i,A.a([B.b4N,A.rY(new A.a4V(j.ax.k3,d),l)],g))
 return new A.Nd(B.xh,A.D(i,B.k,B.f,B.R,0,B.j),d)},
 $S:1557}
@@ -220643,7 +220643,7 @@ B.a2X=new A.L(null,420,B.nD,null)
 B.a6H=new A.r7("\u0413\u043b\u0430\u0432\u043d\u0430\u044f",null,B.a2X,null,!1,!1,null,null,null,1220,null)
 B.a6I=new A.r7("\u0417\u0430\u0434\u0430\u0447\u0438",null,B.a2Y,null,!1,!1,null,null,null,1220,null)
 B.a6J=new A.Lb("\u041d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u043e\u0431\u044a\u0435\u043a\u0442\u0430.",!0,null)
-B.a6K=new A.V4(!1,"App\u0421\u0442\u0440\u043e\u0439. \u043f\u043b\u0430\u043d\u0438\u0440\u0443\u0439. \u0441\u0442\u0440\u043e\u0439. \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0439.",null)
+B.a6K=new A.V4(!1,"App\u0421\u0442\u0440\u043e\u0439. \u043f\u043b\u0430\u043d\u0438\u0440\u0443\u0439 \u2022 \u0441\u0442\u0440\u043e\u0439 \u2022 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0439",null)
 B.a6M=new A.ag3(!1,127)
 B.EB=new A.ag4(127)
 B.x5=new A.Va(0,"polite")
