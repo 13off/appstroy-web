@@ -212318,7 +212318,7 @@ s=h==null?j:h
 if(!k.w)r=k.r||g
 else r=!1
 q=A.aM(a,B.c1,t.l).w.a.a>=1050
-p=q?36:16
+p=q?144:16
 o=q?24:14
 n=q?1/0:k.at
 h=k.d
@@ -212333,7 +212333,7 @@ if(!i)A.cIT(a)
 j=m.x
 s=j==null?l:j
 r=A.aM(a,B.c1,t.l).w.a.a>=1050
-q=r?36:16
+q=r?144:16
 p=r?24:14
 o=r?1/0:1220
 j=m.e.length
@@ -213005,8 +213005,8 @@ p=A.aM(a,B.c1,s).w.a.a>=820?78:76
 o=A.aM(a,B.c1,s).w.a.a>=820?10:7
 n=A.aM(a,B.c1,s).w.a.a>=820?16:11
 s=A.V3(a)
-m=q?36:12
-l=q?36:12
+m=q?144:12
+l=q?144:12
 k=q?24:20
 j=c?B.ac7:B.acC
 i=c?B.aw7:B.aw6
