@@ -1,2 +1,184 @@
 AppStroy web build failure diagnostics
-source=92686991c0ee5e68f939dfca6e4d80e84c80b90c
+source=81a527c83ecd78df9796a55153389990cd073103
+
+===== flutter-test.log =====
+              '    super.initState();\n'
+              '    PushNotificationService.navigationRequest.addListener(\n'
+              '      _handlePushNavigation,\n'
+              '    );\n'
+              '\n'
+              '    if (widget.startupError == null) {\n'
+              '      _authStateSubscription = Supabase.instance.client.auth.onAuthStateChange\n'
+              '          .listen((authState) {\n'
+              '            if (authState.event == AuthChangeEvent.signedIn ||\n'
+              '                authState.event == AuthChangeEvent.initialSession ||\n'
+              '                authState.event == AuthChangeEvent.userUpdated ||\n'
+              '                authState.event == AuthChangeEvent.tokenRefreshed) {\n'
+              '              _handlePushNavigation();\n'
+              '            }\n'
+              '          });\n'
+              '    }\n'
+              '\n'
+              '    WidgetsBinding.instance.addPostFrameCallback((_) {\n'
+              '      _handlePushNavigation();\n'
+              '    });\n'
+              '  }\n'
+              '\n'
+              '  @override\n'
+              '  void dispose() {\n'
+              '    PushNotificationService.navigationRequest.removeListener(\n'
+              '      _handlePushNavigation,\n'
+              '    );\n'
+              '    final authStateSubscription = _authStateSubscription;\n'
+              '    if (authStateSubscription != null) {\n'
+              '      unawaited(authStateSubscription.cancel());\n'
+              '    }\n'
+              '    super.dispose();\n'
+              '  }\n'
+              '\n'
+              '  void _handlePushNavigation() {\n'
+              '    if (_pushNavigationScheduled ||\n'
+              '        PushNotificationService.navigationRequest.value == null) {\n'
+              '      return;\n'
+              '    }\n'
+              '\n'
+              '    _pushNavigationScheduled = true;\n'
+              '    WidgetsBinding.instance.addPostFrameCallback((_) {\n'
+              '      _pushNavigationScheduled = false;\n'
+              '      if (!mounted || PushNotificationService.navigationRequest.value == null) {\n'
+              '        return;\n'
+              '      }\n'
+              '\n'
+              '      final context = appNavigatorKey.currentContext;\n'
+              '      if (context == null) {\n'
+              '        _handlePushNavigation();\n'
+              '        return;\n'
+              '      }\n'
+              '      if (Supabase.instance.client.auth.currentUser == null) {\n'
+              '        // Запрос остаётся ожидающим и будет повторён после восстановления сессии.\n'
+              '        return;\n'
+              '      }\n'
+              '\n'
+              '      final request = PushNotificationService.takeNavigationRequest();\n'
+              '      if (request == null) return;\n'
+              '\n'
+              '      Navigator.of(context).push(\n'
+              '        MaterialPageRoute<void>(\n'
+              '          builder: (_) =>\n'
+              '              NotificationsScreen(focusNotificationId: request.notificationId),\n'
+              '        ),\n'
+              '      );\n'
+              '    });\n'
+              '  }\n'
+              '\n'
+              '  @override\n'
+              '  Widget build(BuildContext context) {\n'
+              '    final themeController = AppThemeController.instance;\n'
+              '\n'
+              '    return AnimatedBuilder(\n'
+              '      animation: themeController,\n'
+              '      builder: (context, _) {\n'
+              '        return MaterialApp(\n'
+              '          title: \'AppСтрой\',\n'
+              '          debugShowCheckedModeBanner: false,\n'
+              '          navigatorKey: appNavigatorKey,\n'
+              '          navigatorObservers: [AppWebHistoryObserver()],\n'
+              '          scrollBehavior: const PremiumScrollBehavior(),\n'
+              '          theme: AppTypography.apply(PremiumDepthTheme.apply(AppTheme.light)),\n'
+              '          darkTheme: AppTypography.apply(AppDarkTheme.theme),\n'
+              '          themeMode: themeController.themeMode,\n'
+              '          themeAnimationDuration: const Duration(milliseconds: 220),\n'
+              '          themeAnimationCurve: Curves.easeOutCubic,\n'
+              '          builder: (context, child) => AppScaleViewport(\n'
+              '            scale: themeController.uiScale,\n'
+              '            child: child ?? const SizedBox.shrink(),\n'
+              '          ),\n'
+              '          home: widget.startupError == null\n'
+              '              ? const AppBrowserBackBridge(child: AuthGate())\n'
+              '              : const _StartupErrorScreen(),\n'
+              '        );\n'
+              '      },\n'
+              '    );\n'
+              '  }\n'
+              '}\n'
+              '\n'
+              'class _StartupErrorScreen extends StatelessWidget {\n'
+              '  const _StartupErrorScreen();\n'
+              '\n'
+              '  @override\n'
+              '  Widget build(BuildContext context) {\n'
+              '    final theme = Theme.of(context);\n'
+              '    final dark = theme.brightness == Brightness.dark;\n'
+              '\n'
+              '    return Scaffold(\n'
+              '      body: SafeArea(\n'
+              '        child: Center(\n'
+              '          child: SingleChildScrollView(\n'
+              '            padding: const EdgeInsets.all(24),\n'
+              '            child: ConstrainedBox(\n'
+              '              constraints: const BoxConstraints(maxWidth: 440),\n'
+              '              child: Container(\n'
+              '                padding: const EdgeInsets.all(28),\n'
+              '                decoration: BoxDecoration(\n'
+              '                  color: dark\n'
+              '                      ? theme.colorScheme.surface.withValues(alpha: 0.96)\n'
+              '                      : Colors.white.withValues(alpha: 0.92),\n'
+              '                  borderRadius: BorderRadius.circular(30),\n'
+              '                  border: Border.all(\n'
+              '                    color: dark ? theme.colorScheme.outline : Colors.white,\n'
+              '                  ),\n'
+              '                  boxShadow: [\n'
+              '                    BoxShadow(\n'
+              '                      color: Colors.black.withValues(alpha: dark ? 0.36 : 0.10),\n'
+              '                      blurRadius: 40,\n'
+              '                      offset: const Offset(0, 18),\n'
+              '                    ),\n'
+              '                  ],\n'
+              '                ),\n'
+              '                child: Column(\n'
+              '                  mainAxisSize: MainAxisSize.min,\n'
+              '                  children: [\n'
+              '                    Icon(\n'
+              '                      Icons.cloud_off_rounded,\n'
+              '                      size: 56,\n'
+              '                      color: theme.colorScheme.onSurface,\n'
+              '                    ),\n'
+              '                    const SizedBox(height: 18),\n'
+              '                    Text(\n'
+              '                      \'Сервер временно недоступен\',\n'
+              '                      textAlign: TextAlign.center,\n'
+              '                      style: theme.textTheme.headlineSmall?.copyWith(\n'
+              '                        color: theme.colorScheme.onSurface,\n'
+              '                        fontWeight: FontWeight.w900,\n'
+              '                      ),\n'
+              '                    ),\n'
+              '                    const SizedBox(height: 10),\n'
+              '                    Text(\n'
+              '                      \'Закрой приложение и открой снова. Если ошибка повторяется, проверь интернет-соединение.\',\n'
+              '                      textAlign: TextAlign.center,\n'
+              '                      style: theme.textTheme.bodyMedium?.copyWith(\n'
+              '                        color: theme.colorScheme.onSurfaceVariant,\n'
+              '                        fontWeight: FontWeight.w600,\n'
+              '                        height: 1.4,\n'
+              '                      ),\n'
+              '                    ),\n'
+              '                  ],\n'
+              '                ),\n'
+              '              ),\n'
+              '            ),\n'
+              '          ),\n'
+              '        ),\n'
+              '      ),\n'
+              '    );\n'
+              '  }\n'
+              '}\n'
+              ''
+     Which: does not contain 'builder: (context, child) => PwaDesktopPageFrame('
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/pwa_global_page_frame_contract_test.dart 13:5  main.<fn>
+  
+
+To run this test again: /opt/hostedtoolcache/flutter/stable-3.44.3-x64/flutter/bin/cache/dart-sdk/bin/dart test /home/runner/work/skbs_app/skbs_app/skbs_app/test/pwa_global_page_frame_contract_test.dart -p vm --plain-name 'one PWA frame covers every application page'
+01:23 +715 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/pwa_global_page_frame_contract_test.dart: desktop bottom navigation stays near twenty centimetres                                     01:23 +716 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/pwa_global_page_frame_contract_test.dart: desktop bottom navigation stays near twenty centimetres                                     01:24 +716 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/pwa_global_page_frame_contract_test.dart: desktop bottom navigation stays near twenty centimetres                                     01:24 +716 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart                                                                                               01:24 +716 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: главный экран разделён по ответственности                                                            01:24 +717 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: главный экран разделён по ответственности                                                            01:24 +717 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: главная сохраняет объекты архив и финансы без отдельного ИИ-FAB                                      01:24 +718 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: главная сохраняет объекты архив и финансы без отдельного ИИ-FAB                                      01:24 +718 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: очистка кешей главной проходит через координатор                                                     01:24 +719 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/home_screen_structure_test.dart: очистка кешей главной проходит через координатор                                                     01:24 +719 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart                                                                                           01:24 +719 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens                                01:24 +720 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/shell_visibility_contract_test.dart: main shell keeps the stable nested route that renders tab screens                                01:24 +720 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart                                                                                             01:24 +720 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: daily task list uses one protected RPC                                                             01:24 +721 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: daily task list uses one protected RPC                                                             01:24 +721 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: task RPC preserves company, scope and permission checks                                            01:24 +722 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: task RPC preserves company, scope and permission checks                                            01:24 +722 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: task RPC keeps existing day, object and draft filters                                              01:24 +723 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/task_rows_fast_contract_test.dart: task RPC keeps existing day, object and draft filters                                              01:24 +723 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart                                                                                   01:24 +723 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: invitation uses the canonical landing and Russian API                                    01:25 +723 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: invitation uses the canonical landing and Russian API                                    01:25 +724 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: invitation uses the canonical landing and Russian API                                    01:25 +724 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: Russian proxy still forwards Auth and REST requests                                      01:25 +725 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/russian_invitation_route_contract_test.dart: Russian proxy still forwards Auth and REST requests                                      01:25 +725 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart                                                                                     01:25 +725 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: новые команды направляются в операционный сервер                                           01:25 +726 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: новые команды направляются в операционный сервер                                           01:25 +726 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: служебная задача по найденной проблеме остаётся обычным черновиком                         01:25 +727 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: служебная задача по найденной проблеме остаётся обычным черновиком                         01:25 +727 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: операционный сервер проверяет роли и остаётся read only                                    01:25 +728 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: операционный сервер проверяет роли и остаётся read only                                    01:25 +728 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: клиент использует подтверждение и обычные рабочие репозитории                              01:25 +729 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: клиент использует подтверждение и обычные рабочие репозитории                              01:25 +729 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: подтверждение показывает критичные поля новых действий                                     01:25 +730 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/ai_extended_operational_actions_test.dart: подтверждение показывает критичные поля новых действий                                     01:25 +730 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/anonymized_candidate_acceptance_test.dart                                                                                     01:25 +730 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/anonymized_candidate_acceptance_test.dart: обезличенный комплект форм полностью собирается                                            01:25 +731 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/anonymized_candidate_acceptance_test.dart: обезличенный комплект форм полностью собирается                                            01:25 +731 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/anonymized_candidate_acceptance_test.dart: выход сотрудника считается завершённым только при 8 из 8                                   01:25 +732 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/anonymized_candidate_acceptance_test.dart: выход сотрудника считается завершённым только при 8 из 8                                   01:25 +732 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_push_contract_test.dart                                                                                                   01:25 +732 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_push_contract_test.dart: iPhone PWA использует стандартный Web Push без Firebase Web                                              01:25 +733 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_push_contract_test.dart: iPhone PWA использует стандартный Web Push без Firebase Web                                              01:25 +733 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_push_contract_test.dart: web push registration is serialized and idempotent                                                       01:26 +734 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/web_push_contract_test.dart: web push registration is serialized and idempotent                                                       01:26 +734 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart                                                                                  01:26 +734 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: панель показывает главную начало работы и активные задачи                               01:26 +735 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: панель показывает главную начало работы и активные задачи                               01:26 +735 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: режим руководителя использует единый серверный выбор без подписи                        01:26 +736 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: режим руководителя использует единый серверный выбор без подписи                        01:26 +736 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: история задач открывается из профиля отдельно от задач                                  01:26 +737 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: история задач открывается из профиля отдельно от задач                                  01:26 +737 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: сотрудник получает фотографии только назначенных ему задач                              01:26 +738 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: сотрудник получает фотографии только назначенных ему задач                              01:26 +738 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: панель сотрудника не использует общий редактор прораба                                  01:26 +739 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/employee_actionable_tasks_contract_test.dart: панель сотрудника не использует общий редактор прораба                                  01:26 +739 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/safe_interaction_performance_contract_test.dart                                                                               01:26 +739 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/safe_interaction_performance_contract_test.dart: safe interaction tuning keeps the visual renderer intact                             01:26 +740 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/safe_interaction_performance_contract_test.dart: safe interaction tuning keeps the visual renderer intact                             01:26 +740 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/safe_interaction_performance_contract_test.dart: desktop interactions remain fast and use controlled overscroll                       01:26 +741 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/safe_interaction_performance_contract_test.dart: desktop interactions remain fast and use controlled overscroll                       01:26 +741 -2: loading /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart                                                                              01:26 +741 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: profile stays personal and opens the unified settings center                        01:26 +742 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: profile stays personal and opens the unified settings center                        01:26 +742 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: settings combine common controls with role-specific real screens                    01:26 +743 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: settings combine common controls with role-specific real screens                    01:26 +743 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: personal profile data is protected by authenticated RPC and storage                 01:26 +744 -2: /home/runner/work/skbs_app/skbs_app/skbs_app/test/unified_role_settings_profile_contract_test.dart: personal profile data is protected by authenticated RPC and storage                 01:26 +744 -2: Some tests failed.                                                                                                                                                                      
