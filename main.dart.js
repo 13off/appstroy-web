@@ -88207,9 +88207,9 @@ $1$data(a){return this.G(this,A.P("call","$1$data",0,[a],["data"],0))},
 $2$backgroundColor$foregroundColor(a,b){return this.G(this,A.P("call","$2$backgroundColor$foregroundColor",0,[a,b],["backgroundColor","foregroundColor"],0))},
 $1$isSlider(a){return this.G(this,A.P("call","$1$isSlider",0,[a],["isSlider"],0))},
 $3$isDiscrete$parentBox$sliderTheme(a,b,c){return this.G(this,A.P("call","$3$isDiscrete$parentBox$sliderTheme",0,[a,b,c],["isDiscrete","parentBox","sliderTheme"],0))},
+$2$exception$stack(a,b){return this.G(this,A.P("call","$2$exception$stack",0,[a,b],["exception","stack"],0))},
 $2$id$status(a,b){return this.G(this,A.P("call","$2$id$status",0,[a,b],["id","status"],0))},
 $7$axes$checklistItemId$date$milestoneId$notDoneComment$status$work(a,b,c,d,e,f,g){return this.G(this,A.P("call","$7$axes$checklistItemId$date$milestoneId$notDoneComment$status$work",0,[a,b,c,d,e,f,g],["axes","checklistItemId","date","milestoneId","notDoneComment","status","work"],0))},
-$2$exception$stack(a,b){return this.G(this,A.P("call","$2$exception$stack",0,[a,b],["exception","stack"],0))},
 $1$inherit(a){return this.G(this,A.P("call","$1$inherit",0,[a],["inherit"],0))},
 $1$removeTop(a){return this.G(this,A.P("call","$1$removeTop",0,[a],["removeTop"],0))},
 $3$indicator(a,b,c){return this.G(this,A.P("call","$3$indicator",0,[a,b,c],["indicator"],0))},
@@ -221538,11 +221538,10 @@ s=A.dk3(j)
 if(!j.cx){r=j.a
 r=A.cUz(r.d,r.c)}else r=!1
 k.push(new A.a4E(i,s,r,A.djV(j),m))}o=A.C(k,B.I,B.e,B.h,0,B.j)
-k=A.cWT(j,j.dx.d?"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0444\u043e\u0442\u043e \xab\u0414\u043e\xbb \u043f\u043e\u043a\u0430 \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e":"\u0424\u043e\u0442\u043e \xab\u0414\u043e\xbb \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e","before","\u0424\u043e\u0442\u043e \xab\u0414\u043e\xbb")
-k=A.a([k,B.G,A.cWT(j,j.dx.f?"\u0411\u0435\u0437 \u043d\u0443\u0436\u043d\u043e\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0444\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb \u0437\u0430\u0434\u0430\u0447\u0443 \u043d\u0435\u043b\u044c\u0437\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0438\u0442\u044c":"\u0424\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e","after","\u0424\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb")],l)
+k=A.dk5(j)
+i=A.cWT(j,j.dx.d?"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0444\u043e\u0442\u043e \xab\u0414\u043e\xbb \u043f\u043e\u043a\u0430 \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e":"\u0424\u043e\u0442\u043e \xab\u0414\u043e\xbb \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e","before","\u0424\u043e\u0442\u043e \xab\u0414\u043e\xbb")
+k=A.a([k,B.aq,i,B.G,A.cWT(j,j.dx.f?"\u0411\u0435\u0437 \u043d\u0443\u0436\u043d\u043e\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0444\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb \u0437\u0430\u0434\u0430\u0447\u0443 \u043d\u0435\u043b\u044c\u0437\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0438\u0442\u044c":"\u0424\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb \u043d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043e","after","\u0424\u043e\u0442\u043e \xab\u041f\u043e\u0441\u043b\u0435\xbb")],l)
 if(j.fr!=null)B.c.v(k,A.a([B.G,A.dk6(j)],l))
-k.push(B.aq)
-k.push(A.dk5(j))
 n=A.C(k,B.I,B.e,B.h,0,B.j)
 if(b.b<980)return A.C(A.a([o,B.a0,n],l),B.I,B.e,B.h,0,B.j)
 return A.T(A.a([A.S(o,6),B.pY,A.S(n,5)],l),B.r,m,B.e,B.h,0,m)},
