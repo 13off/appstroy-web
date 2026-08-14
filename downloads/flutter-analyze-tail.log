@@ -50,4 +50,4 @@ Analyzing skbs_app...
    info • Use interpolation to compose strings and values. Try using string interpolation to build the composite string • lib/features/expenses/presentation/expenses_screen.dart:228:39 • prefer_interpolation_to_compose_strings
    info • Use interpolation to compose strings and values. Try using string interpolation to build the composite string • lib/features/expenses/presentation/expenses_screen.dart:240:23 • prefer_interpolation_to_compose_strings
 
-3 issues found. (ran in 21.8s)
+3 issues found. (ran in 21.6s)
