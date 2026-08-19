@@ -1,7 +1,7 @@
 Resolving dependencies...
 Downloading packages...
   _flutterfire_internals 1.3.73 (1.3.76 available)
-  archive 3.6.1 (4.0.9 available)
+  archive 3.6.1 (4.1.0 available)
   code_assets 1.2.1 (2.0.0 available)
   dio 5.10.0 (5.11.0 available)
   dio_web_adapter 2.2.0 (2.2.1 available)
@@ -16,7 +16,7 @@ Downloading packages...
   google_fonts 8.1.0 (8.2.1 available)
   gotrue 2.26.0 (2.27.2 available)
   hooks 2.0.2 (2.2.0 available)
-  image 4.3.0 (4.9.1 available)
+  image 4.3.0 (4.9.2 available)
   intl 0.19.0 (0.20.3 available)
   jni 1.0.0 (1.0.3 available)
   jni_flutter 1.0.1 (1.0.2 available)
@@ -66,5 +66,5 @@ Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Caught exception: Already watching path: /home/runner/work/skbs_app/skbs_app/android
-Running Gradle task 'assembleRelease'...                          235.6s
+Running Gradle task 'assembleRelease'...                          203.2s
 ✓ Built build/app/outputs/flutter-apk/app-release.apk (79.9MB)
